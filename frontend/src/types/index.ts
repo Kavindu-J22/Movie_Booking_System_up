@@ -24,6 +24,8 @@ export interface Movie {
   active: boolean;
   createdAt: string;
   updatedAt: string;
+  averageRating?: number;
+  totalReviews?: number;
 }
 
 export interface Showtime {
@@ -120,4 +122,37 @@ export interface PaymentRequest {
   expiryMonth: string;
   expiryYear: string;
   cvv: string;
+}
+
+export interface Review {
+  id: string;
+  movieId: string;
+  userId?: string;
+  email: string;
+  reviewerName: string;
+  rating: number;
+  reviewText: string;
+  approved: boolean;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface ReviewRequest {
+  movieId: string;
+  email: string;
+  reviewerName: string;
+  rating: number;
+  reviewText: string;
+}
+
+export interface ReviewUpdateRequest {
+  rating: number;
+  reviewText: string;
+}
+
+export interface MovieRating {
+  movieId: string;
+  averageRating: number;
+  totalReviews: number;
+  ratingDistribution: number[];
 }

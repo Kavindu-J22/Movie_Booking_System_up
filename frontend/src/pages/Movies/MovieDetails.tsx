@@ -26,6 +26,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../store';
 import { fetchMovieById, fetchMovieShowtimes } from '../../store/slices/movieSlice';
+import { ReviewList } from '../../components/Reviews';
 
 const MovieDetails: React.FC = () => {
   const { movieId } = useParams<{ movieId: string }>();
@@ -255,6 +256,11 @@ const MovieDetails: React.FC = () => {
             ))
           )}
         </Box>
+
+        <Divider sx={{ my: 4 }} />
+
+        {/* Reviews Section */}
+        <ReviewList movieId={movieId!} />
       </Box>
     </Container>
   );
