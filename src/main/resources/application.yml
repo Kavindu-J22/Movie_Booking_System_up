@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: movie-booking-system
+
+  main:
+    allow-circular-references: true
+  
+  data:
+    mongodb:
+      uri: mongodb+srv://kavindujayasinghesecondary_db_user:Kavindu%40123@cluster0.tjydxot.mongodb.net/movie_booking_system?retryWrites=true&w=majority&appName=MovieBookingSystem
+  
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  
+  security:
+    user:
+      name: admin
+      password: admin123
+
+# JWT Configuration
+jwt:
+  secret: mySecretKey123456789012345678901234567890
+  expiration: 86400000 # 24 hours in milliseconds
+
+# Cloudinary Configuration
+cloudinary:
+  cloud-name: dfj4ah2m2
+  upload-preset: uploadpr
+
+# Server Configuration
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+# Logging
+logging:
+  level:
+    com.moviebooking: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.data.mongodb: DEBUG
