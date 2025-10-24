@@ -19,9 +19,6 @@ export const darkTheme = createTheme({
       default: '#0a0a0a', // Very dark background
       paper: '#1a1a1a', // Dark paper
     },
-    surface: {
-      main: '#2a2a2a',
-    },
     text: {
       primary: '#ffffff',
       secondary: '#b3b3b3',
@@ -153,12 +150,4 @@ export const darkTheme = createTheme({
   },
 });
 
-declare module '@mui/material/styles' {
-  interface Palette {
-    surface: Palette['primary'];
-  }
 
-  interface PaletteOptions {
-    surface?: PaletteOptions['primary'];
-  }
-}

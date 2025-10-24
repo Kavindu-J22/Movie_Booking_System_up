@@ -6,12 +6,12 @@ import {
   TextField,
   Button,
   Typography,
-  Link,
   Alert,
   Container,
   InputAdornment,
   IconButton,
 } from '@mui/material';
+import Link from '@mui/material/Link';
 import { Visibility, VisibilityOff, Email, Lock } from '@mui/icons-material';
 import { useNavigate, useLocation, Link as RouterLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';

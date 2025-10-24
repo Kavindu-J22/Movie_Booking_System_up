@@ -23,7 +23,7 @@ import {
   Schedule,
   EventSeat,
   AttachMoney,
-  QrCode,
+  QrCodeScanner,
   Cancel,
   Visibility,
   Download,
@@ -401,7 +401,7 @@ const MyBookings: React.FC = () => {
                         {booking.status === 'CONFIRMED' && (
                           <Button
                             size="small"
-                            startIcon={<QrCode />}
+                            startIcon={<QrCodeScanner />}
                             onClick={() => handleViewTicket(booking)}
                             sx={{ mr: 1 }}
                           >
@@ -436,7 +436,7 @@ const MyBookings: React.FC = () => {
         >
           <DialogTitle>
             <Box display="flex" alignItems="center">
-              <QrCode sx={{ mr: 1 }} />
+              <QrCodeScanner sx={{ mr: 1 }} />
               Movie Ticket
             </Box>
           </DialogTitle>

@@ -19,7 +19,7 @@ import {
   Schedule,
   EventSeat,
   AttachMoney,
-  QrCode,
+  QrCodeScanner,
   Download,
   Home,
   Visibility,
@@ -417,7 +417,7 @@ const BookingConfirmation: React.FC = () => {
           <Card sx={{ mb: 4 }}>
             <CardContent sx={{ p: 4, textAlign: 'center' }}>
               <Box display="flex" alignItems="center" justifyContent="center" mb={3}>
-                <QrCode sx={{ mr: 1, color: 'primary.main' }} />
+                <QrCodeScanner sx={{ mr: 1, color: 'primary.main' }} />
                 <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
                   Your Ticket
                 </Typography>
